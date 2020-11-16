@@ -1,9 +1,6 @@
 package structures
 
-import (
-	"fmt"
-	"strings"
-)
+import "fmt"
 
 // ListNode is a node in a singly-linked list.
 type ListNode struct {
@@ -12,8 +9,7 @@ type ListNode struct {
 }
 
 func (l *ListNode) String() string {
-	a := Node2Array(l)
-	return strings.Replace(fmt.Sprint(a), " ", ",", -1)
+	return fmt.Sprint(Node2Array(l))
 }
 
 // Array2Node converts an array to a LinkedList

@@ -107,7 +107,7 @@ func TestListNodeRepr(t *testing.T) {
 					},
 				},
 			},
-			expected: "[1,2,3]",
+			expected: "[1 2 3]",
 		},
 	}
 	for _, tc := range tests {
