@@ -1,11 +1,19 @@
 package structures
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 // ListNode is a node in a singly-linked list.
 type ListNode struct {
 	Val  int
 	Next *ListNode
+}
+
+func (l *ListNode) String() string {
+	a := Node2Array(l)
+	return strings.Replace(fmt.Sprint(a), " ", ",", -1)
 }
 
 // Array2Node converts an array to a LinkedList

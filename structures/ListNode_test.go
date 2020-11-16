@@ -86,3 +86,34 @@ func TestNode2Array(t *testing.T) {
 	tooLong := Array2Node(make([]int, 11))
 	assert.Panics(t, func() { Node2Array(tooLong) }, "Current depth 11 exceeds limit 10")
 }
+
+func TestListNodeRepr(t *testing.T) {
+	type args struct {
+		head *ListNode
+	}
+	tests := []struct {
+		args     args
+		expected string
+	}{
+		{
+			args: args{
+				head: &ListNode{
+					Val: 1,
+					Next: &ListNode{
+						Val: 2,
+						Next: &ListNode{
+							Val: 3,
+						},
+					},
+				},
+			},
+			expected: "[1,2,3]",
+		},
+	}
+	for _, tc := range tests {
+		testname := fmt.Sprintf("%v", tc.expected)
+		t.Run(testname, func(t *testing.T) {
+			assert.Equal(t, tc.expected, fmt.Sprint(tc.args.head))
+		})
+	}
+}
