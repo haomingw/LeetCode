@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestIsPalindrome(t *testing.T) {
+func TestMaxArea(t *testing.T) {
 	type args struct {
 		height []int
 	}

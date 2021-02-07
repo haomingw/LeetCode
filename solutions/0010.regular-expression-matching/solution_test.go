@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestIsPalindrome(t *testing.T) {
+func TestIsMatch(t *testing.T) {
 	type args struct {
 		s string
 		p string
