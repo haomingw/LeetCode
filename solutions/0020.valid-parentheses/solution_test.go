@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestRemoveNthFromEnd(t *testing.T) {
+func TestIsValid(t *testing.T) {
 	type args struct {
 		s string
 	}
